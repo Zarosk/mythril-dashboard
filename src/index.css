@@ -1,68 +1,88 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    @apply dark;
   }
-  a:hover {
-    color: #747bff;
+
+  body {
+    @apply bg-moria-900 text-mythril-100 font-sans antialiased;
+    margin: 0;
   }
-  button {
-    background-color: #f9f9f9;
+
+  * {
+    @apply border-mythril-800;
   }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm transition-all;
+  }
+
+  .btn-primary {
+    @apply bg-dwarven text-white hover:bg-dwarven-light hover:-translate-y-0.5 hover:shadow-lg hover:shadow-dwarven/30;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-mythril-600 text-mythril-200 hover:border-mythril-400 hover:bg-white/5;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-mythril-400 hover:text-mythril-100 hover:bg-white/5;
+  }
+
+  .card {
+    @apply bg-moria-700 border border-white/10 rounded-xl p-6;
+  }
+
+  .card-hover {
+    @apply hover:border-dwarven/50 hover:shadow-lg hover:shadow-dwarven/10 transition-all;
+  }
+
+  .input {
+    @apply w-full bg-moria-800 border border-mythril-700 rounded-lg px-4 py-2.5 text-mythril-100 placeholder-mythril-500 focus:outline-none focus:border-dwarven focus:ring-1 focus:ring-dwarven;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-green-500/20 text-green-400;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-500/20 text-yellow-400;
+  }
+
+  .badge-error {
+    @apply bg-red-500/20 text-red-400;
+  }
+
+  .badge-info {
+    @apply bg-dwarven/20 text-dwarven-light;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-moria-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-mythril-700 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dwarven;
 }
