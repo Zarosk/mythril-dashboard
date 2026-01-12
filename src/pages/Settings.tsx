@@ -14,7 +14,7 @@ export const Settings: React.FC = () => {
     <div>
       <Header
         title="Settings"
-        subtitle="Configure your Mythril experience"
+        subtitle="Configure your local Mythril instance"
       />
 
       <div className="p-8 max-w-3xl space-y-6">

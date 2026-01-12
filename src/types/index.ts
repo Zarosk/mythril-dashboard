@@ -3,7 +3,7 @@ export interface User {
   discordId: string;
   username: string;
   avatar: string;
-  plan: 'free' | 'lite' | 'pro' | 'team';
+  plan?: string; // Optional, not used in self-hosted
   createdAt: string;
 }
 
