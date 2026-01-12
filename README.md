@@ -1,24 +1,21 @@
 # Mythril Dashboard
 
-Optional web dashboard for Mythril. Built with React + Vite.
+Optional web dashboard for managing your Mythril instance. Built with React + Vite.
 
-## Development
+## Features
+
+- View brain contents
+- Monitor bot status
+- Configure settings
+
+## Running
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
-
-```bash
-npm run build
-```
-
-## Links
-
-- [Main Bot](https://github.com/Zarosk/mythril-bot)
-- [Documentation](https://mythril-docs.vercel.app)
+Opens at `http://localhost:5173`
 
 ## License
 
